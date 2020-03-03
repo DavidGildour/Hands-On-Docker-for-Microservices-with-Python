@@ -31,7 +31,7 @@ WORKDIR /opt/code
 
 RUN mkdir -p /opt/code/db
 # Add postgres setup
-ADD --chown=777 ./docker/db/postgres-setup.sh /opt/code/db/
+ADD ./docker/db/postgres-setup.sh /opt/code/db/
 RUN  /opt/code/db/postgres-setup.sh
 
 ## Install our code to prepare the DB
